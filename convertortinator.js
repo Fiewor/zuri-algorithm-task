@@ -1,13 +1,12 @@
 let type;
-function convertFahrToCelsius (fahrenheit) {
-   let celsius = (fahrenheit * 32) * 5/9;
-   if (Array.isArray(fahrenheit)) {
-       type = " array";
-    } else if (typeof fahrenheit === 'object' && fahrenheit !== null) {
-        type = " object";
+function convertFahrToCelsius (fahr) {
+   let celsius = (fahr * 32) * 5/9;
+   if (Array.isArray(fahr)) {
+        console.log(`${fahr} is not a valid number, but is an array`);
+    } else if (typeof fahr === 'object' && fahr !== null) {
+        console.log(`${fahr} is not a valid number, but is an object`);
     } else {
-        console.log(celsius.toFixed(4) + " degF");
+        console.log(celsius.toFixed(4) + " degC");
     }
-    console.log(`${fahrenheit} is not a valid number but an` + type);
 }
-convertFahrToCelsius(40);
+convertFahrToCelsius({john: 40});
