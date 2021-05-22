@@ -1,4 +1,3 @@
-let type;
 function convertFahrToCelsius (fahr) {
    let celsius = (fahr - 32) * 5/9;
    if (Array.isArray(fahr)) {
@@ -9,4 +8,3 @@ function convertFahrToCelsius (fahr) {
         console.log(celsius.toFixed(4) + " degC");
     }
 }
-convertFahrToCelsius({john: 40});
